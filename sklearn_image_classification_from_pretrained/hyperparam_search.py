@@ -200,7 +200,7 @@ def take_n_best(x, n):
     idxs = [xx-1 for xx in x["rank_test_score"][:n]]
     y = { k:np.array(v)[idxs] for k,v in x.items() }
     y["rank_test_score"] = list(range(0, len(idxs)))
-
+    return y,0
 
     
 
